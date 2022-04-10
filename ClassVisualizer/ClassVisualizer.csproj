@@ -1,0 +1,72 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageVersion>1.0.0</PackageVersion>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Authors>Artak Hakobyan</Authors>
+    <Company>OROptimizer</Company>
+    <Product>OROptimizer</Product>
+    <Description>A library for visualizing classes and interfaces in an XML format.
+The interfaces/classes in this library were designed to provide class visualization in test projects, and most 
+most probably improvements will be made in the future to the design of interfaces in this library. 
+Therefore, use this library at your own risk.
+        </Description>
+    <Copyright>Copyright 2022 (c) OROptimizer. All rights reserved.</Copyright>
+    <PackageProjectUrl>https://github.com/artakhak/ClassVisualizer</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/artakhak/ClassVisualizer</RepositoryUrl>
+    <PackageTags>class visualizer</PackageTags>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="JetBrains.Annotations" Version="2021.2.0" PrivateAssets="all" ExcludeAssets="runtime">
+      <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="OROptimizer.Shared" Version="2.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AttributeValueSanitizer.cs" />
+    <Compile Include="ClassVisualizerBase.cs" />
+    <Compile Include="ClassVisualizerHelpers.cs" />
+    <Compile Include="CollectionVisualizer.cs" />
+    <Compile Include="IAttributeValueSanitizer.cs" />
+    <Compile Include="ICategoryToPropertiesMapper.cs" />
+    <Compile Include="IClassVisualizer.cs" />
+    <Compile Include="IInterfacePropertyInfo.cs" />
+    <Compile Include="IInterfacePropertyVisualizationHelper.cs" />
+    <Compile Include="IInterfaceVisualizerSettings.cs" />
+    <Compile Include="InterfacePropertyInfo.cs" />
+    <Compile Include="InterfacePropertyVisualizationHelper.cs" />
+    <Compile Include="InterfaceVisualizer.cs" />
+    <Compile Include="InterfaceVisualizerSettings.cs" />
+    <Compile Include="InterfaceVisualizerSettingsAmbientContext.cs" />
+    <Compile Include="IObjectVisualizationContext.cs" />
+    <Compile Include="IObjectVisualizationContextFactory.cs" />
+    <Compile Include="IPropertyCategory.cs" />
+    <Compile Include="ISaveVisualizedInterface.cs" />
+    <Compile Include="IValueVisualizerDependencyObjects.cs" />
+    <Compile Include="IValueVisualizerFactory.cs" />
+    <Compile Include="IVisualizedObjectsHistory.cs" />
+    <Compile Include="NonNullValueInitializer.cs" />
+    <Compile Include="NullValueVisualizer.cs" />
+    <Compile Include="ObjectVisualizationContext.cs" />
+    <Compile Include="ObjectVisualizationContextFactory.cs" />
+    <Compile Include="PrimitiveTypeVisualizer.cs" />
+    <Compile Include="PropertyCategory.cs" />
+    <Compile Include="PropertyCategoryExtensionMethods.cs" />
+    <Compile Include="PropertyVisualizationType.cs" />
+    <Compile Include="SaveVisualizedInterface.cs" />
+    <Compile Include="SpecialVisualizedPropertyNames.cs" />
+    <Compile Include="ValueVisualizerDependencyObjects.cs" />
+    <Compile Include="ValueVisualizerFactoryBase.cs" />
+    <Compile Include="VisualizedObjectsHistory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+</Project>
