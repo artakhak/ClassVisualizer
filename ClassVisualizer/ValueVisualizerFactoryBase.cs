@@ -10,7 +10,7 @@ namespace ClassVisualizer
     public class ValueVisualizerFactoryBase : IValueVisualizerFactory
     {
         public ValueVisualizerFactoryBase([NotNull] IInterfacePropertyVisualizationHelper interfacePropertyVisualizationHelper,
-            [NotNull] AttributeValueSanitizer attributeValueSanitizer)
+            [NotNull] IAttributeValueSanitizer attributeValueSanitizer)
         {
             ValueVisualizerDependencyObjects = new ValueVisualizerDependencyObjects(this,
                 interfacePropertyVisualizationHelper, attributeValueSanitizer);

@@ -20,9 +20,11 @@ namespace ClassVisualizer
 
                 if (currentChar == '\'')
                 {
-                    attributeValueStrBldr.Append(currentChar);
-                    if (i == attributeValue.Length - 1 || attributeValue[i + 1] != '\'')
-                        attributeValueStrBldr.Append('\'');
+                    attributeValueStrBldr.Append("&apos;");
+                }
+                else if (currentChar == '"')
+                {
+                    attributeValueStrBldr.Append("&quot;");
                 }
                 else if (currentChar == '\r')
                 {

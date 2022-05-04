@@ -1,22 +1,25 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.0.1</PackageVersion>
     <EnableDefaultItems>false</EnableDefaultItems>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <Authors>Artak Hakobyan</Authors>
     <Company>OROptimizer</Company>
-    <Product>OROptimizer</Product>
+    <Product>ClassVisualizer</Product>
     <Description>A library for visualizing classes and interfaces in an XML format.
 The interfaces/classes in this library were designed to provide class visualization in test projects, and most 
 most probably improvements will be made in the future to the design of interfaces in this library. 
 Therefore, use this library at your own risk.
-        </Description>
+    </Description>
     <Copyright>Copyright 2022 (c) OROptimizer. All rights reserved.</Copyright>
     <PackageProjectUrl>https://github.com/artakhak/ClassVisualizer</PackageProjectUrl>
     <RepositoryUrl>https://github.com/artakhak/ClassVisualizer</RepositoryUrl>
     <PackageTags>class visualizer</PackageTags>
-    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <PackageReleaseNotes>
+	    -Couple of minor changes to ClassVisualizer.AttributeValueSanitizer to better escape apostrophe and quotient.
+	    -Added ClassVisualizer.HtmlEncodeBasedAttributeValueSanitizer to be used if the visualization will be viewed in Html.
+    </PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
@@ -31,6 +34,7 @@ Therefore, use this library at your own risk.
     <Compile Include="ClassVisualizerBase.cs" />
     <Compile Include="ClassVisualizerHelpers.cs" />
     <Compile Include="CollectionVisualizer.cs" />
+    <Compile Include="HtmlEncodeBasedAttributeValueSanitizer.cs" />
     <Compile Include="IAttributeValueSanitizer.cs" />
     <Compile Include="ICategoryToPropertiesMapper.cs" />
     <Compile Include="IClassVisualizer.cs" />
